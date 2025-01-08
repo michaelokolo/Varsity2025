@@ -1,0 +1,754 @@
+/***Digital font***/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+/***Navbar start***/
+body .navbar{
+    padding:15px 100px;
+    color:black;
+    background: linear-gradient(to right, #062844,#062844, #ffde0c);/*#062844*/
+    overflow: hidden;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar h1{
+   font-weight:bold;
+}
+
+.navbar h1 .varsity{
+    color:#ffde0c;
+    text-shadow:1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.navbar h1 .year{
+    color:#fff;
+}
+/***Navbar end***/
+
+
+/***Hero section start***/
+.hero{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(6, 40, 68, 1),
+        rgba(6, 40, 68, 0.9), 
+        rgba(6, 40, 68, 0.9)), 
+        url("https://assets-cdn.sums.su/HU/images/varsity/Varsity2024/images/Hull_University_Union_-_Varsity_-__12th_March_2022-221.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 20px;
+    margin-top:50px;
+    background-attachment: fixed; 
+}
+
+.hero .hero-container .hero-text{
+    color:white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero .hero-container .hero-text h1{
+    font-weight: 800;
+}
+
+.hero .hero-container .hero-text p{
+    font-weight: 500;
+    
+}
+
+
+
+
+
+.hero-text h1, 
+.hero-text p {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.8s ease-out;
+}
+
+.hero-text h1 {
+    transition-delay: 0.2s;
+}
+
+.hero-text p:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.hero-text p:nth-child(3) {
+    transition-delay: 0.6s;
+}
+
+.hero-text p:nth-child(4) {
+    transition-delay: 0.8s;
+}
+.hero-text p:nth-child(5) {
+    transition-delay: 1s;
+}
+
+.hero-text.animate h1, 
+.hero-text.animate p {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+
+
+
+
+.hero .hero-container .varsity-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    max-width:450px;
+    margin: 0 auto;
+    position: relative;
+    animation: slide-in 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+
+
+.hero .hero-container .varsity-logo img{
+    max-width:100%;
+    height:auto;
+    max-width:100%;
+}
+/***Hero section end***/
+
+
+/***Countdown clock section start***/
+.count-down-clock-section{
+    background: #062844;
+    position: relative;
+    height: 50vh;
+    
+}
+
+.count-down-clock-section .countdown-container h2{
+    color: #ffde0c;
+    font-size:2.5rem;
+    font-family: "Orbitron", "sans-serif";
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.9);
+    padding-bottom: 2rem;
+}
+
+.count-down-clock-section .countdown-container .visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.count-down-clock-section .countdown-container .count-down-clock{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    
+}
+
+ .count-down-clock-section .countdown-container .count-down-clock .countdown-block{
+    padding:1rem;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius:8px;
+    background: linear-gradient(135deg, #062844 50%, #ffde0c 50%);
+    overflow: hidden;
+    position: relative;
+    background-size: 200% 200%;
+    background-position: 0 0;
+    transition: background-position 0.5s ease, color 0.3s ease;
+    z-index: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    cursor: pointer;
+}
+
+.count-down-clock-section .countdown-container .count-down-clock .countdown-block .number{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color:#fff;
+    display: block;
+    transition:transform 0.3s ease, opacity 0.3s ease;
+}
+
+.count-down-clock-section .countdown-container .count-down-clock .countdown-block.animate{
+    animation: slideUp 0.6s ease forwards;
+}
+
+.count-down-clock-section .countdown-container .count-down-clock .countdown-block:nth-child(1){
+    animation-delay: 0.2s;
+}
+.count-down-clock-section .countdown-container .count-down-clock .countdown-block:nth-child(2){
+    animation-delay: 0.4s;
+}
+.count-down-clock-section .countdown-container .count-down-clock .countdown-block:nth-child(3){
+    animation-delay: 0.6s;
+}
+.count-down-clock-section .countdown-container .count-down-clock .countdown-block:nth-child(4){
+    animation-delay: 0.8s;
+}
+
+.count-down-clock-section .countdown-container .count-down-clock .countdown-block span{
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color:#ffde0c;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.count-down-clock-section .countdown-container .count-down-clock .countdown-block:hover span{
+    color:#062844;
+}
+
+ .count-down-clock-section .countdown-container .count-down-clock .countdown-block:hover{
+    color:#062844;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background-position: 100% 100%; 
+}
+.count-down-clock-section .countdown-container .count-down-clock .countdown-block {
+    transition: background-position 0.5s ease-in-out, color 0.3s ease;
+}
+
+
+.count-down-clock-section #varsityvideo{
+    position:absolute;
+    right: 0;
+    bottom:0;
+    min-width:100%;
+    min-height:100%;
+    object-fit: cover;
+    z-index:1;
+}
+ .count-down-clock-section .countdown-container{
+    position: relative;
+    bottom: 0;
+    background: rgba(6, 40, 68, 0.7);
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    object-fit: cover;
+    z-index: 2;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/***Countdown clock section end***/
+
+/***Carousel section start***/
+.carousel{
+    width:100%;
+    overflow:hidden;
+    background-color: #062844;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position : relative;
+}
+
+.carousel .carousel-wrapper{
+    display:flex;
+    animation: scroll 15s linear infinite;
+}
+.carousel .carousel-wrapper img{
+    width:300px;
+    flex-shrink: 0;
+    border:#ffde0c 10px solid;
+    margin:1rem;
+}
+
+.carousel .carousel-wrapper:hover{
+    animation-play-state:paused;
+    cursor:pointer;
+}
+.carousel .carousel-wrapper img:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+/***Carousel section end***/
+
+/***social-section start***/
+
+.social-section{
+    padding: 2rem 0;
+    height:100vh;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(6, 40, 68, 1),
+        rgba(6, 40, 68, 0.9)),
+        url("https://assets-cdn.sums.su/HU/images/varsity/Hull_University_Union_-_Varsity_-__12th_March_2022-247.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed; 
+}
+.social-section .container{
+    max-width: 1200px;
+    margin:0 auto;
+    color: #fff;
+}
+
+.social-section .row{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:4rem;
+}
+
+.social-section .img-container{
+    position: relative;
+    width:100%;
+    max-width:300px;
+    aspect-ratio: 4/3;
+    margin:0 auto;
+    border: 5px solid #ffde0c;
+
+}
+
+
+
+.social-section .img-container .image1{
+    position:absolute;
+    z-index:1;
+    object-fit: cover;
+    width:100%;
+    height: 100%;
+    top:5px;
+    left:10px;
+    display: block;
+    transform: translate(4%,7%);
+}
+
+
+
+.social-section .img-container .image2{
+    position: absolute;
+    z-index:2;
+    object-fit: cover;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(25%,50%);
+
+}
+
+.social-section .img-container figcaption{
+    display: none;
+}
+
+.social-section .text-container h2{
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0.5rem;
+    margin-bottom: 2rem;
+}
+.social-section .text-container p{
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.social-section .text-container .hash-tag{
+    color:#ffde0c;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+    opacity: 0;
+    transition: all 0.1s;
+}
+.social-section .text-container .hash-tag-container .hash-tag.animate{
+    animation: slide-in-left 1s ease-out forwards;
+    
+}
+
+.social-section .text-container .hash-tag-container .hash-tag:nth-child(1){
+    animation-delay: 0s;
+}
+.social-section .text-container .hash-tag-container .hash-tag:nth-child(2){
+    animation-delay: 0.4s;
+}
+.social-section .text-container .hash-tag-container .hash-tag:nth-child(3){
+    animation-delay: 0.8s;
+}
+
+
+
+
+/***social-section end***/
+
+
+/***Food and Drink section start***/
+.food-drink-section .heading{
+    color:#ffde0c;
+    font-size:2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.food-drink-section .heading.animate{
+    animation: slide-in-left 1s ease-out forwards;
+    
+}
+.food-drink-section .food-water-container .card .card-body h3{
+    color:#ffde0c;
+    font-size:2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: #062844;
+}
+
+.food-drink-section{
+    background: #062844;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.food-drink-section .food-water-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+.food-drink-section .food-water-container .card{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    align-items: center;
+    border: #ffde0c 5px solid;
+    
+}
+
+.food-drink-section .food-water-container .card::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(to top, #062844, transparent, transparent,transparent);
+    z-index: 1;
+    transition: all 1s ease-out;
+}
+.food-drink-section .food-water-container .card:hover::after{
+    display: none;
+}
+
+.food-drink-section .food-water-container .card:nth-child(1){
+    background: linear-gradient( 
+        rgba(6, 40, 68, 0.8), rgba(6, 40, 68, 1)), url(images/image1.jpg) ;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.food-drink-section .food-water-container .card:nth-child(2){
+    background: linear-gradient( 
+        rgba(6, 40, 68, 0.8), rgba(6, 40, 68, 1)), url(images/image3.jpg) ;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: none;
+    background-size: cover;
+}
+.food-drink-section .food-water-container .card:nth-child(3){
+    background: linear-gradient( 
+        rgba(6, 40, 68, 0.8), rgba(6, 40, 68, 1)), url(images/image2.jpg) ;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.food-drink-section .food-water-container .card-text{
+    color:#fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.2rem;
+    
+    width:100%;
+}
+.food-drink-section .food-water-container .card-text .card-text-link:link,
+.food-drink-section .food-water-container .card-text .card-text-link:visited{
+    color:#ffde0c;
+    font-weight: 800;
+    font-size: 1.2rem;
+    transition: all 0.5s ease-out;
+    text-decoration-color: none;
+}
+.food-drink-section .food-water-container .card-text .card-text-link:hover{
+    text-decoration-color:#ffde0c;
+    text-decoration: underline;
+}
+
+.food-drink-section .food-water-container .card .card-body{
+    transform: translateY(30%);
+    transition: all 0.5s ease-out;
+}
+.food-drink-section .food-water-container .card:hover .card-body{
+    transform: translateY(0%);
+    background: scale(1.1);
+}
+
+/***Food and Drink section end***/
+
+/***FAQ section start***/
+.FAQ-section{
+    background: #062844;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.FAQ-section .container .heading{
+    color:#ffde0c;
+    font-size:2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.FAQ-section .container .accordion-container{
+    border:#ffde0c 2px solid;
+}
+.FAQ-section .container .accordion{
+    background-color: #062844;
+    color: #ffde0c;
+    cursor:pointer;
+    padding: 1rem;
+    width:100%;
+    text-align: left;
+    border:none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FAQ-section .container .accordion .accordion-icon{
+    font-size:1.25rem;
+    font-weight: bold;
+    transition: 0.4s ease-out;
+}
+
+.active, .FAQ-section .container .accordion:hover{
+    background-color: #062844;
+}
+/*.FAQ-section .container .accordion::after{
+    content: '\002B';
+    display: block;
+    font-size:1rem;
+    float:right;
+    margin-left:5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.4s ease-out;
+}
+.FAQ-section .container .accordion.active::after{
+    content: "\2212";
+    font-weight: bold;
+}*/
+
+.FAQ-section .container .panel{
+    padding:0 1rem;
+    background-color:#ffde0c;
+    max-height: 0;
+    overflow:hidden;
+    transition: max-height 0.2s ease-out;
+    color:#062844;
+}
+
+
+
+
+
+/***FAQ section end***/
+
+/***Animations***/
+@keyframes slide-in{
+    from {
+        transform: translateX(100%);
+        opacity:0;
+    }
+    to {
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left{
+    0% {
+        transform: translateX(-100px);
+        opacity:0;
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100% {
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp{
+    0%{
+        opacity:0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes slideUp{
+    0%{
+        opacity:0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-1000px);
+    }
+}
+
+/***Media Query***/
+
+@media(max-width: 768px){
+    body .navbar{
+        padding:10px 70px;
+    }
+    .navbar h1{
+        font-size:2rem;
+    }
+    .hero{
+        margin-top: 30px;
+    }
+    .hero .hero-container .hero-text #hero-section{
+         font-size:2rem;
+         margin-top: 50px;
+    }
+    .hero .hero-container .hero-text{
+        
+        padding: 30px 5px 5px 5px;
+        font-size: 1rem;
+    }
+    .hero .hero-container .varsity-logo{
+        max-width:270px;
+    }
+
+    .count-down-clock-section .countdown-container h2{
+        font-size: 1.9rem;
+    }
+    .count-down-clock-section .countdown-container .count-down-clock{
+        display: flex;
+        justify-content: center;
+        gap:1rem;
+        
+    }
+    .count-down-clock-section .countdown-container .count-down-clock .countdown-block{
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding:0.5rem;
+        font-family: 'Orbitron', sans-serif;
+    }
+    .carousel .carousel-wrapper img{
+        width:200px;
+    }
+
+    .social-section .img-container{
+        width: 50%;
+        margin-bottom:70px;
+    }
+
+    .social-section .text-container{
+        text-align: center;
+    }
+    .social-section .text-container h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+@media(max-width: 480px){
+    .navbar h1{
+        font-size:1.5rem;
+    }
+    body .navbar{
+        padding:10px 50px;
+    }
+
+    .hero .hero-container .hero-text #hero-section{
+        font-size:1.5rem;
+        margin-top: 40px;
+   }
+   .hero .hero-container .hero-text{
+    font-size: 0.9rem;
+}
+
+.hero .hero-container .varsity-logo{
+    max-width:200px;
+}
+
+.carousel .carousel-wrapper img{
+    width:150px;
+}
+}
