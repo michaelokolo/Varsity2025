@@ -582,20 +582,7 @@ body .navbar{
 .active, .FAQ-section .container .accordion:hover{
     background-color: #062844;
 }
-/*.FAQ-section .container .accordion::after{
-    content: '\002B';
-    display: block;
-    font-size:1rem;
-    float:right;
-    margin-left:5px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: 0.4s ease-out;
-}
-.FAQ-section .container .accordion.active::after{
-    content: "\2212";
-    font-weight: bold;
-}*/
+
 
 .FAQ-section .container .panel{
     padding:0 1rem;
@@ -604,6 +591,19 @@ body .navbar{
     overflow:hidden;
     transition: max-height 0.2s ease-out;
     color:#062844;
+}
+
+.FAQ-section .container .panel ul li a{
+    color:#062844;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease-out;
+    transition-delay: 0.1s;}
+    
+.FAQ-section .container .panel ul li a:hover{
+    color:#062844;
+    text-decoration: underline;
 }
 
 
