@@ -5,11 +5,41 @@ html{
     scroll-behavior: smooth;
 }
 
+
+body .button{
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.85rem 2.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    background: #ffde0c;
+    color: #062844;
+    box-shadow: 0 5px 15px rgba(255, 222, 12, 0.4);
+    outline: none;
+}
+
+
+body .button a{
+    color: #062844;
+    text-decoration: none;
+}
+body .button:hover {
+    background: #e6c80a;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 222, 12, 0.6);
+}
+
+
 /***Navbar start***/
 body .navbar{
     padding:15px 100px;
     color:black;
-    background: linear-gradient(to right, #062844,#062844, #ffde0c);/*#062844*/
+    background: linear-gradient(to right, #062844,#062844, #ffde0c);
     overflow: hidden;
     position:fixed;
     top:0;
@@ -38,7 +68,7 @@ body .navbar{
 
 /***Hero section start***/
 .hero{
-    height:100vh;
+    height:120vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +77,7 @@ body .navbar{
         rgba(6, 40, 68, 1),
         rgba(6, 40, 68, 0.9), 
         rgba(6, 40, 68, 0.9)), 
-        url("https://assets-cdn.sums.su/HU/images/varsity/Varsity2024/images/Hull_University_Union_-_Varsity_-__12th_March_2022-221.jpg");
+        url("https://assets-cdn.sums.su/HU/website/Varsity2025_/Hull_University_Union_-_Varsity_-__12th_March_2022-221.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,6 +103,11 @@ body .navbar{
     
 }
 
+.hero .hero-container .hero-text .button{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width:200px;
+}
 
 
 
@@ -289,7 +324,6 @@ body .navbar{
 }
 
 .carousel .carousel-wrapper:hover{
-    animation-play-state:paused;
     cursor:pointer;
 }
 .carousel .carousel-wrapper img:hover{
@@ -308,7 +342,7 @@ body .navbar{
         to right bottom, 
         rgba(6, 40, 68, 1),
         rgba(6, 40, 68, 0.9)),
-        url("https://assets-cdn.sums.su/HU/images/varsity/Hull_University_Union_-_Varsity_-__12th_March_2022-247.jpg");
+        url("https://assets-cdn.sums.su/HU/website/Varsity2025_/Hull_University_Union_-_Varsity_-__12th_March_2022-107.jpg");
     display: flex;
     align-items: center;
     justify-content: center;
@@ -417,7 +451,7 @@ body .navbar{
 /***Food and Drink section start***/
 .food-drink-section .heading{
     color:#ffde0c;
-    font-size:2.5rem;
+    font-size:3rem;
     font-weight: 800;
     text-align: center;
     margin-bottom: 4rem;
@@ -480,7 +514,7 @@ body .navbar{
 
 .food-drink-section .food-water-container .card:nth-child(1){
     background: linear-gradient( 
-        rgba(6, 40, 68, 0.8), rgba(6, 40, 68, 1)), url(images/image1.jpg) ;
+        rgba(6, 40, 68, 0.8), rgba(6, 40, 68, 1)), url("https://assets-cdn.sums.su/HU/website/Varsity2025_/image1.jpg") ;
     background-position: center;
     object-fit: cover;
     background-repeat: none;
@@ -489,7 +523,7 @@ body .navbar{
 
 .food-drink-section .food-water-container .card:nth-child(2){
     background: linear-gradient( 
-        rgba(6, 40, 68, 0.8), rgba(6, 40, 68, 1)), url(images/image3.jpg) ;
+        rgba(6, 40, 68, 0.8), rgba(6, 40, 68, 1)), url("https://assets-cdn.sums.su/HU/website/Varsity2025_/image3.jpg") ;
     background-position: center;
     object-fit: cover;
     background-repeat: none;
@@ -497,7 +531,7 @@ body .navbar{
 }
 .food-drink-section .food-water-container .card:nth-child(3){
     background: linear-gradient( 
-        rgba(6, 40, 68, 0.8), rgba(6, 40, 68, 1)), url(images/image2.jpg) ;
+        rgba(6, 40, 68, 0.8), rgba(6, 40, 68, 1)), url("https://assets-cdn.sums.su/HU/website/Varsity2025_/image2.jpg") ;
     background-position: center;
     object-fit: cover;
     background-repeat: none;
@@ -548,7 +582,7 @@ body .navbar{
 }
 .FAQ-section .container .heading{
     color:#ffde0c;
-    font-size:2.5rem;
+    font-size:3rem;
     font-weight: 800;
     text-align: center;
     margin-bottom: 4rem;
@@ -593,6 +627,16 @@ body .navbar{
     color:#062844;
 }
 
+.FAQ-section .container .panel ul {
+    padding: 0;
+}
+.FAQ-section .container .panel ul li{
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    list-style: none;
+}
+
 .FAQ-section .container .panel ul li a{
     color:#062844;
     font-weight: 800;
@@ -600,7 +644,7 @@ body .navbar{
     padding: 0.5rem 0;
     transition: all 0.3s ease-out;
     transition-delay: 0.1s;}
-    
+
 .FAQ-section .container .panel ul li a:hover{
     color:#062844;
     text-decoration: underline;
@@ -608,9 +652,232 @@ body .navbar{
 
 
 
+/***Contact section start***/
+.contact-section {
+    position: relative;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    padding:7rem 2rem;
+    height:75vh;
+    overflow: hidden;
+    background:linear-gradient(rgba(6, 40, 68, 0.8), rgba(6, 40, 68, 1)) , url("https://assets-cdn.sums.su/HU/website/Varsity2025_/Hull_University_Union_-_Varsity_-__12th_March_2022-237_.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    border: none;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background: #062844;
+    clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
+    z-index: -1;
+    border: none;
+    overflow: hidden;
+}
 
 
-/***FAQ section end***/
+
+.contact-section .container {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+
+.contact-section .heading {
+    color: #ffde0c;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact-section .text-content {
+    color: #e6e6e6;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/***Contact section end***/
+
+
+
+/***Map section start***/
+.event-location-section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:4rem 1.5rem;
+    background: #062844;
+    flex-direction: column;
+}
+
+.event-location-section h2{
+    color:#ffde0c;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.event-location-section .container{
+    display: flex;
+    gap:2rem;
+    max-width:1200px;
+    width:100%;
+    flex-wrap:wrap;
+}
+
+.event-location-section .container .map-container{
+    flex:1;
+    min-width:300px;
+    height: 350px;
+    border: 5px solid #ffde0c;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.event-location-section .container .map-container iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+.event-location-section .container .text-container{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.event-location-section .container .text-container h3{
+    color:#fff;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.event-location-section .container .text-container p{
+    color:#fff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.event-location-section .container .text-container ul{
+    padding:0;
+    color:#fff;
+    margin-bottom: 0.5rem;
+}
+
+.event-location-section .container .text-container ul li{
+    list-style: none;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.event-location-section .container .text-container .button{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width:230px;
+}
+
+.event-location-section .container .text-container .button{
+    color: #062844;
+    text-decoration: none;
+}
+/***Map section end***/
+
+/***Footer start***/
+.footer {
+    background: #062844;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 2px solid #ffde0c;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer .footer-container .footer-logo {
+    max-width: 150px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-container .footer-logo .navbar-brand{
+    font-size: 2rem;
+    font-weight: 800;
+    text-decoration: none;
+    text-align: center;
+    
+}
+.footer .footer-container .footer-logo .navbar-brand .varsity{
+    color:#ffde0c;
+}
+
+.footer .footer-container .footer-logo .navbar-brand .year{
+    color:#fff;
+}
+
+.footer .footer-container .footer-copy{
+    color: #f4f4f4;
+}
+
+
+
+.footer .footer-container .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-container .footer-links a {
+    color: #ffde0c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-container .footer-links a:hover {
+   text-decoration: underline;
+}
+
+.footer .footer-container .footer-copy {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+/**Footer end**/
 
 /***Animations***/
 @keyframes slide-in{
@@ -726,6 +993,62 @@ body .navbar{
         font-size: 2rem;
         text-align: center;
     }
+
+    .food-drink-section .food-water-container .card .card-body h3{
+        font-size:1.5rem;
+        padding:0.5rem 0;
+    }
+    .food-drink-section .food-water-container .card .card-body .card-text{
+        font-size: 1rem;
+    }
+
+    .food-drink-section .heading{
+        font-size: 2rem;
+    }
+
+    .FAQ-section .container .accordion{
+        font-size: 1rem;
+    }
+    .FAQ-section .container .heading{
+        font-size: 2rem;
+    }
+
+    .FAQ-section .container .panel ul li{
+        padding: 0.5rem 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+    .contact-section {
+        padding: 5rem 1rem;
+    }
+    .contact-section .heading {
+        font-size: 2rem;
+    }
+    .contact-section .text-content {
+        font-size: 1rem;
+    }
+    body .button {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+    }
+    .event-location-section .container .text-container p{
+        line-height: 1.8;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .event-location-section .container .text-container .button{
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        width:210px;
+    }
+    .event-location-section h2{
+        font-size: 2rem;
+    }
+
+    .event-location-section .container .text-container h3{
+        font-size: 1.5rem;
+    }
+    
 }
 
 @media(max-width: 480px){
